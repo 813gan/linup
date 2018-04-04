@@ -19,4 +19,4 @@ Use `--version` to select version. For example to download long-term maintance k
 `# linup.sh --version 4.4`
 
 After every successful download linup will save timestamp and refuse to download and build kernel until new version appears. To rebuld kernel use
-'linup.sh -r'
+`linup.sh -r`
