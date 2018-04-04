@@ -1,7 +1,7 @@
 # linup
-This script will update your custom kernel.
+**This script will update your custom kernel.**
 
-**Dependencies**
+### Dependencies
 
 - gcc 
 - make
@@ -9,7 +9,7 @@ This script will update your custom kernel.
 - gpg && [Linux kernel release signing keys](https://www.kernel.org/category/signatures.html)
 - Kernel compiled with .config support and access to .config through /proc/config.gz ( `CONFIG_IKCONFIG=y` and `CONFIG_IKCONFIG_PROC=y`  ) 
 
-**Usage**
+### Usage
 
 If You just want to download and install last stable release simply use
 `# linup.sh`
