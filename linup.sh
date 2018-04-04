@@ -34,7 +34,7 @@ function update_kernel
     then
 	release="$(echo "$json" | jq '.latest_stable.version as $v | .releases | .[]  | if (.version == $v ) then . else empty end')"
     else
-	release="$(echo "$json" | jq --arg ver "$version" '.releases | .[] | if (.version | test( "^"+$ver+".*";"" )) then . else empty end')"
+	release="$(echo "$json" | jq --arg ver "$version" '.releases | .[] | if (.version | test( "^"+$ver+"(\\.|$).*";"" )) then . else empty end')"
     fi
 
     [[ "" == "$release" ]] && { echo "There is no release '$version'!" ; exit 1; }
