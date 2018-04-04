@@ -6,7 +6,7 @@ This script will update your custom kernel.
 - gcc 
 - make
 - \>=jq-1.5
-- gpg && (Linux kernel release signing keys)[https://www.kernel.org/category/signatures.html]
+- gpg && [Linux kernel release signing keys](https://www.kernel.org/category/signatures.html)
 - Kernel compiled with .config support and access to .config through /proc/config.gz ( `CONFIG_IKCONFIG=y` and `CONFIG_IKCONFIG_PROC=y`  ) 
 
 **Usage**
