@@ -117,6 +117,9 @@ do
 	    shift
 	    opt_version="$1"
 	    ;;
+	-dl|--download-only)
+	    download_only=true
+	    ;;
 	*)
 	    echo "what does $arg mean ???"
 	    exit 1
@@ -149,11 +152,14 @@ then
     update_kernel
 fi
 
-configure_kernel
-make_kernel
-install_kernel
-postinst
-update_bootloader
+if [[ ! $download_only ]]
+then
+    configure_kernel
+    make_kernel
+    install_kernel
+    postinst
+    update_bootloader
+fi
 
 [[ $eol ]] && echo 'This is EOL release!'
 echo 'ok'
