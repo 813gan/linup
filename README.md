@@ -15,11 +15,9 @@ Linup accepts following command line arguments:
 
 - `-r` or `--rebuild`  
 Do not check for new version, just build and install Linux sources pointed by symlink "$src_location/linux" (by default /usr/src/linux)
-
 - `-dl` or `--download-only`  
 Do not build or install anything, just download sources, update symlink (by default /usr/src/linux) and replace downloaded `.config` with your current configuration.
 If your sources are up-to-date linup will exit without any changes.
-
 - `--version`  
 Select kernel version. You can find available versions at [kernel.org](https://www.kernel.org/category/releases.html)
 
