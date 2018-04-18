@@ -9,7 +9,11 @@
 - gpg && [Linux kernel release signing keys](https://www.kernel.org/category/signatures.html)
 - Kernel compiled with `.config` support and access to `.config` through `/proc/config.gz` ( `CONFIG_IKCONFIG=y` and `CONFIG_IKCONFIG_PROC=y` ) 
 
+
+
 ### Usage
+
+### Warning: Before running this script as root make shure that You are able to restore your previous kernel.  Messing up with kernel/bootloader always can make your system non-bootable. 
 
 By default linup do following things:
 - Check if your kernel is up-to-date, if it is, exit.
