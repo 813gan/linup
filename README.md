@@ -6,7 +6,7 @@
 - gcc 
 - make
 - \>=jq-1.5
-- gpg-2 && [Linux kernel release signing keys](https://www.kernel.org/category/signatures.html)
+- gpg && [Linux kernel release signing keys](https://www.kernel.org/category/signatures.html)
 - GRUB-2
 - Kernel compiled with `.config` support and access to `.config` through `/proc/config.gz` ( `CONFIG_IKCONFIG=y` and `CONFIG_IKCONFIG_PROC=y` ) 
 
@@ -58,3 +58,15 @@ and then build and install
 `# linup.sh -r`
 
 You may find [Gentoo handbook](https://wiki.gentoo.org/wiki/Handbook:X86/Installation/Kernel) and [wiki](https://wiki.gentoo.org/wiki/Main_Page) helpful while configuring kernel.
+
+### Troubleshooting
+ > linup prints message `===FAILED=TO=VERIFY=SIGNATURE===` 
+ 
+You probably didn't install keys. Use  
+`gpg --search-keys developer-name-here@kernel.org`
+
+> I have no idea how to get my current `.config`  
+
+On Debian you can find it in `/boot/config*`. Assuming You have downloaded and extracted kernel sources in `/usr/src/linux` use  
+`# cp -v /boot/config* /usr/src/.config`
+
