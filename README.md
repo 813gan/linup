@@ -68,5 +68,5 @@ You probably didn't install keys. Use
 > I have no idea how to get my current `.config`  
 
 On Debian you can find it in `/boot/config*`. Assuming You have downloaded and extracted kernel sources in `/usr/src/linux` use  
-`# cp -v /boot/config* /usr/src/.config`
+`# cp -v /boot/config* /usr/src/linux/.config`
 
