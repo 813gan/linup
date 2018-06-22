@@ -16,7 +16,7 @@
 
 ### Warning: Before running this script as root make sure that You will be able to restore your previous kernel.  Messing up with kernel/bootloader always can make your system non-bootable. 
 
-**Warning: This script was tested only on Gentoo and Debian.**
+**Warning: This script was tested only on Gentoo.**
 
 By default linup do following things:
 - Check if your kernel is up-to-date, if it is, exit.
